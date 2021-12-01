@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  lanaweb:
+    build: ./jetty/
+    image: "jetty"
+    volumes:
+      - asvol:/datuak
+
+  kaixo:
+    build: .
+    ports:
+            - "8080:80"
+    links:
+      - lanaweb
+    volumes:
+      - asvol:/datuak
+volumes:
+  asvol: 
+    #external: true #porque ya esta creado
