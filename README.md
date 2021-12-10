@@ -1,11 +1,11 @@
 # ClienteJetty
 
-VAGRANT
+VAGRANT \
 vagrant up  \
-vagrant ssh
-chmod 777 vagrant_provision.sh
-./vagrant_provision.sh
+vagrant ssh \
+chmod 777 vagrant_provision.sh \
+./vagrant_provision.sh \
 
 
-DOCKER
+DOCKER \
 docker-compose up
