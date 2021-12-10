@@ -1,7 +1,7 @@
 # ClienteJetty
 
 VAGRANT
-vagrant up \n
+vagrant up 
 vagrant ssh
 chmod 777 vagrant_provision.sh
 ./vagrant_provision.sh
