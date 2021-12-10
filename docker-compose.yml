@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  lanaweb:
+    image: clientejetty
+    build: ./jetty/
+    ports:
+      - "8080:8080"
+    volumes:
+      - asvol:/datuak
+
+  basic:
+    build: .
+    environment:
+      - host=lanaweb #para conseguir la IP del contenedor 
+    links:
+      - lanaweb
+    volumes:
+      - asvol:/datuak
+    depends_on:
+      - lanaweb
+volumes:
+  asvol: 
+

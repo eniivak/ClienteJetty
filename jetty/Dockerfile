@@ -1,0 +1,5 @@
+FROM jetty
+
+WORKDIR $JETTY_BASE
+CMD java -jar $JETTY_HOME/start.jar
+EXPOSE 8080
